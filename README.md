@@ -52,50 +52,28 @@ To get started with **SqlBake**, follow these steps:
 3. Execute **SqlBake** commands using the CLI interface:
 
    ```bash
-   php sqlbake.php [command] [options]
+   ./sqlbake.php [command] [options]
    ```
 
    For example, to generate SQL scripts for database tables:
 
    ```bash
-   php sqlbake.php generate:tables
+   ./sqlbake.php generate:tables
    ```
 
-## Load SQL Alter and Patch Scripts
+### Command Line Options
 
-The "Load SQL Alter and Patch Scripts" feature enables seamless database updates and migrations, irrespective of the underlying codebase or application framework. It provides a standardized method to apply SQL scripts for altering schema, applying patches, or performing migrations.
-
-### Usage
-
-To utilize this feature, follow these steps:
-
-1. Organize your SQL scripts into a directory structure based on their purpose or version.
-2. Use the following command to load the SQL scripts into the database:
-
-   ```bash
-   php sqlbake.php load:scripts path/to/scripts/directory
-   ```
-
-### Benefits
-
-- **Framework Agnostic**: This functionality is not tied to any specific application framework, making it compatible with a wide range of systems.
-- **Database Compatibility**: Works seamlessly with MySQL, MariaDB, PostgreSQL, and AWS Aurora database systems.
-- **Version Control**: Easily manage and track database schema changes using version control systems like Git.
-- **Integration**: Can be integrated into Continuous Integration/Continuous Deployment (CI/CD) pipelines or deployment workflows alongside other database management tools.
-
-### Example
-
-Suppose you have a set of SQL scripts stored in a directory named "migrations" within your project repository. To apply these scripts to your database, you can use the following command:
+Use the following command line arguments to execute various operations with SqlBake:
 
 ```bash
-php sqlbake.php load:scripts /path/to/project/migrations
+./sqlbake.php --proc=list,save,clean,load           # Stored procedures operations
+./sqlbake.php --table=list,save,clean,load,show     # Table operations
+./sqlbake.php --run=test,statuscheck,env            # Run diagnostics
+./sqlbake.php --deploy=stage,production,dev         # Run deployment steps
+./sqlbake.php --sync=[fromdb,todb]                  # Run database sync
 ```
 
-This command will execute all SQL scripts found in the "migrations" directory, applying any schema changes or updates to the connected database.
-
-### Note
-
-Ensure that your SQL scripts are compatible with the target database system and that you have appropriate permissions to execute them.
+These options enable you to perform different database management tasks with SqlBake, including managing stored procedures, tables, running diagnostics, deploying changes, and synchronizing databases.
 
 ## Docker Support
 
@@ -129,27 +107,25 @@ Ensure that your SQL scripts are compatible with the target database system and 
 
    This will start a bash shell within the container, allowing you to execute SqlBake commands as usual.
 
-## Docker Compose
+### Docker Compose
 
-Alternatively, you can use Docker Compose to manage SqlBake and its dependencies. Follow these steps:
+Alternatively, you can use Docker Compose to manage SqlBake and its dependencies. Here's how to set it up:
 
 1. Ensure you have Docker Compose installed on your system.
 
-2. Navigate to the project directory containing the `docker-compose.yml` file.
-
-3. Run the following command to build and start the containers:
+2. Run Docker Compose to build and start the containers:
 
    ```bash
    docker-compose up -d
    ```
 
-4. Once the containers are running, you can access SqlBake using:
+3Access the SqlBake container:
 
    ```bash
-   docker-compose exec php bash
+   docker-compose exec sqlbake bash
    ```
 
-   This will start a bash shell within the PHP container, allowing you to execute SqlBake commands as usual.
+   Now you can execute SqlBake commands within the container environment.
 
 ## License
 
@@ -159,4 +135,4 @@ Alternatively, you can use Docker Compose to manage SqlBake and its dependencies
 
 **SqlBake** is developed and maintained by David St John at [DevOps ToolSmiths](https://devops-toolsmiths.com/).
 
-For bug reports, feature requests, or contributions, please visit the [SqlBake GitHub repository](https://github.com/davestj/SqlBake).
+For bug reports, help testing and project colab, feature requests, or contributions, please visit the [SqlBake GitHub repository](https://github.com/davestj/SqlBake).
