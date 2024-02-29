@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/apps
+
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile.mysql
+    ports:
+      - "23306:3306"
+    volumes:
+      - ./datbases:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 

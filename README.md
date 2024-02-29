@@ -97,6 +97,60 @@ This command will execute all SQL scripts found in the "migrations" directory, a
 
 Ensure that your SQL scripts are compatible with the target database system and that you have appropriate permissions to execute them.
 
+## Docker Support
+
+**SqlBake** also provides Docker support for easy deployment and management in containerized environments. To run SqlBake using Docker, follow these steps:
+
+1. Ensure you have Docker installed on your system.
+
+2. Clone the repository:
+
+   ```bash
+   git clone https://github.com/DevOps-ToolSmiths/SqlBake.git
+   ```
+
+3. Navigate to the project directory:
+
+   ```bash
+   cd SqlBake
+   ```
+
+4. Build the Docker image:
+
+   ```bash
+   docker build -t sqlbake .
+   ```
+
+5. Run the Docker container:
+
+   ```bash
+   docker run -it sqlbake bash
+   ```
+
+   This will start a bash shell within the container, allowing you to execute SqlBake commands as usual.
+
+## Docker Compose
+
+Alternatively, you can use Docker Compose to manage SqlBake and its dependencies. Follow these steps:
+
+1. Ensure you have Docker Compose installed on your system.
+
+2. Navigate to the project directory containing the `docker-compose.yml` file.
+
+3. Run the following command to build and start the containers:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+4. Once the containers are running, you can access SqlBake using:
+
+   ```bash
+   docker-compose exec php bash
+   ```
+
+   This will start a bash shell within the PHP container, allowing you to execute SqlBake commands as usual.
+
 ## License
 
 **SqlBake** is licensed under the GNU General Public License v3.0 (GPL-3.0).
@@ -106,4 +160,3 @@ Ensure that your SQL scripts are compatible with the target database system and 
 **SqlBake** is developed and maintained by David St John at [DevOps ToolSmiths](https://devops-toolsmiths.com/).
 
 For bug reports, feature requests, or contributions, please visit the [SqlBake GitHub repository](https://github.com/davestj/SqlBake).
-

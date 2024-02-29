@@ -1,0 +1,14 @@
+# Use the official MySQL 8 image
+FROM mysql:8
+
+# Expose MySQL port
+EXPOSE 3306
+
+# EDIT!!!  Set the root password for MySQL
+ENV MYSQL_ROOT_PASSWORD=
+
+# Set the data directory
+VOLUME /var/lib/mysql
+
+# Set the entry point to bash
+ENTRYPOINT ["/bin/bash"]
