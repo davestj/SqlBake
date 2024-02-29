@@ -1,0 +1,16 @@
+{
+    "name": "devops-toolsmiths/sqlbake",
+    "description": "DevOps ToolSmiths SQLBake - Database management tool",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": "^8.0",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevOpsToolSmith\\": "src/"
+        }
+    }
+}
