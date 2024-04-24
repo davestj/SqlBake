@@ -40,7 +40,7 @@ To get started with **SqlBake**, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/DevOps-ToolSmiths/SqlBake.git
+   git clone https://github.com/davestj/SqlBake.git
    ```
 
 2. Navigate to the project directory:
@@ -84,7 +84,7 @@ These options enable you to perform different database management tasks with Sql
 2. Clone the repository:
 
    ```bash
-   git clone https://github.com/DevOps-ToolSmiths/SqlBake.git
+   git clone https://github.com/davestj/SqlBake.git
    ```
 
 3. Navigate to the project directory:
