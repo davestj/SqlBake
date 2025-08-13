@@ -18,9 +18,9 @@ define("REMOTE_DB_PASS", "");
 
 // Require files
 require_once(__DIR__ . '/config.traits.php');
-require_once(__DIR__ . '/../lib/db.base.class.php');
-require_once(__DIR__ . '/../lib/db.utils.class.php');
-require_once(__DIR__ . '/../lib/common.utils.class.php');
+require_once(__DIR__ . '/../src/db.base.class.php');
+require_once(__DIR__ . '/../src/db.utils.class.php');
+require_once(__DIR__ . '/../src/common.utils.class.php');
 
 use SqlBake\ConfigTraits;
 use SqlBake\DBBase;
