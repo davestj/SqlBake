@@ -1,6 +1,6 @@
 <?php
 /**
- * DevOpsToolSmith Database management tool - SqlBake();
+ * SqlBake – Database management tool
  *
  * Utility to take stored procs and tables and save to sql files
  * Ability to load sql alter and patch scripts for deployment.
@@ -13,9 +13,9 @@
  *
  * @author davestj@gmail.com
  *
- * Class DevOpsToolSmithDb
+ * Class SqlBakeDb
  */
-class DevOpsToolSmithDb extends PDO {
+class SqlBakeDb extends PDO {
     /**
      * @var string|null
      */

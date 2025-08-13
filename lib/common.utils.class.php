@@ -1,6 +1,6 @@
 <?php
 /**
- * DevOpsToolSmith Database management tool - SqlBake();
+ * SqlBake – Database management tool
  *
  * Utility to take stored procs and tables and save to sql files
  * Ability to load sql alter and patch scripts for deployment.
@@ -10,12 +10,12 @@
 
 /**
  * Class OpsSmithUtils
- * @uses DevOpsToolSmithDb
- */
-class OpsSmithUtils extends DevOpsToolSmithDb
+ * @uses SqlBakeDb
+*/
+class OpsSmithUtils extends SqlBakeDb
 {
-    use OpsSmithDBConfig;
-    use OpsSmithConfig;
+    use SqlBakeDBConfig;
+    use SqlBakeConfig;
 
     public $base_path = "./databases";
 
@@ -27,7 +27,7 @@ class OpsSmithUtils extends DevOpsToolSmithDb
     public function cmd__sync($fromdb, $todb, $databases)
     {
         if (!in_array($fromdb, $databases)) {
-            echo "syncing from hotfix by default to DevOpsToolSmith\n";
+            echo "syncing from hotfix by default to SqlBake\n";
             return;
         }
 
@@ -70,7 +70,7 @@ class OpsSmithUtils extends DevOpsToolSmithDb
 
                 default:
                     if ($this->get_env() == ENV_LOCAL) {
-                        echo "deploying to portal.DevOpsToolSmith.int\n";
+                        echo "deploying to portal.SqlBake.int\n";
                     }
             }
         } catch (Exception $e) {
