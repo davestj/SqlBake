@@ -1,6 +1,6 @@
 {
-    "name": "devops-toolsmiths/sqlbake",
-    "description": "DevOps ToolSmiths SQLBake - Database management tool",
+    "name": "sqlbake/sqlbake",
+    "description": "SqlBake – Database management tool",
     "type": "project",
     "license": "GPL-3.0-or-later",
     "require": {
@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DevOpsToolSmith\\": "src/"
+            "SqlBake\\": "lib/"
         }
     }
 }
