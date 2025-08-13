@@ -1,6 +1,6 @@
 <?php
 /**
- * DevOpsToolSmith Database management tool - SqlBake();
+ * SqlBake – Database management tool
  *
  * Utility to take stored procs and tables and save to SQL files
  * Ability to load SQL alter and patch scripts for deployment.
@@ -8,11 +8,11 @@
  */
 
 /**
- * Trait OpsSmithDBConfig
+ * Trait SqlBakeDBConfig
  *
  * Config objects for db abstraction layer and system configurations
  */
-trait OpsSmithDBConfig{
+trait SqlBakeDBConfig{
 
     public function db_manager_host(){
         return "prod-db-manager";
@@ -74,9 +74,9 @@ trait OpsSmithDBConfig{
 }
 
 /**
- * Trait OpsSmithConfig
+ * Trait SqlBakeConfig
  */
-trait OpsSmithConfig{
+trait SqlBakeConfig{
 
     public function get_env(){
         return ENV;

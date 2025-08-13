@@ -1,6 +1,6 @@
 <?php
 /**
- * DevOpsToolSmith Database management tool - SqlBake();
+ * SqlBake – Database management tool
  *
  * Utility to take stored procs and tables and save to SQL files
  * Ability to load SQL alter and patch scripts for deployment.
@@ -22,9 +22,9 @@ require_once(__DIR__ . '/../lib/db.base.class.php');
 require_once(__DIR__ . '/../lib/db.utils.class.php');
 require_once(__DIR__ . '/../lib/common.utils.class.php');
 
-use DevOpsToolSmith\ConfigTraits;
-use DevOpsToolSmith\DBBase;
-use DevOpsToolSmith\DBUtils;
-use DevOpsToolSmith\CommonUtils;
+use SqlBake\ConfigTraits;
+use SqlBake\DBBase;
+use SqlBake\DBUtils;
+use SqlBake\CommonUtils;
 
 
