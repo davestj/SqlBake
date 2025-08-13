@@ -25,6 +25,6 @@ require_once(__DIR__ . '/../lib/common.utils.class.php');
 use SqlBake\ConfigTraits;
 use SqlBake\DBBase;
 use SqlBake\DBUtils;
-use SqlBake\CommonUtils;
+use SqlBake\SqlBakeUtils;
 
 
