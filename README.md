@@ -1,6 +1,6 @@
-# DevOps ToolSmiths - SqlBake
+# SqlBake
 
-Welcome to **DevOps ToolSmiths - SqlBake**, a powerful database management tool designed to streamline SQL scripting tasks, manage database schema changes, and automate routine database operations.
+Welcome to **SqlBake**, a powerful database management tool designed to streamline SQL scripting tasks, manage database schema changes, and automate routine database operations.
 
 This was developed in 2012 with php 5.5/7.1.
 New 2024 release, updated to be used with php 8.1 and 8.2 with the newly added ability to run database migrations for continuous integration best practices
@@ -9,7 +9,7 @@ app and codebase agnostic. The only requirements? Read below.
 
 ## Overview
 
-**SqlBake** is a versatile utility developed by DevOps ToolSmiths to simplify database management tasks in development, testing, and production environments. With SqlBake, you can:
+**SqlBake** is a versatile utility designed to simplify database management tasks in development, testing, and production environments. With SqlBake, you can:
 
 - Generate SQL scripts for database schema creation, alteration, and patching.
 - Execute SQL scripts to apply changes to your database schema.
@@ -133,6 +133,6 @@ Alternatively, you can use Docker Compose to manage SqlBake and its dependencies
 
 ## Credits
 
-**SqlBake** is developed and maintained by David St John at [DevOps ToolSmiths](https://devops-toolsmiths.com/).
+**SqlBake** is developed and maintained by David St John.
 
 For bug reports, help testing and project colab, feature requests, or contributions, please visit the [SqlBake GitHub repository](https://github.com/davestj/SqlBake).
