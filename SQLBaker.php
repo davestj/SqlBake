@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 /**
- * DevOpsToolSmith Database management tool - SqlBake();
+ * SqlBake – Database management tool
  *
  * Utility to take stored procs and tables and save to SQL files
  * Ability to load SQL alter and patch scripts for deployment.
@@ -16,9 +16,9 @@ if (file_exists($autoloadFile)) {
     require $autoloadFile;
 }
 
-use DevOpsToolSmith\OpsSmithUtils;
+use SqlBake\SqlBakeUtils;
 
-$utility = new OpsSmithUtils();
+$utility = new SqlBakeUtils();
 
 // Command-line argument handling
 $shortOptions = "p:t:r:d:s:";
