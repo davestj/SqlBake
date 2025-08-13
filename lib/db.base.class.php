@@ -1,6 +1,6 @@
 <?php
 /**
- * SqlBake – Database management tool
+ * SqlBake
  *
  * Utility to take stored procs and tables and save to sql files
  * Ability to load sql alter and patch scripts for deployment.

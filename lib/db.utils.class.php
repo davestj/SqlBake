@@ -1,6 +1,6 @@
 <?php
 /**
- * SqlBake – Database management tool
+ * SqlBake
  *
  * Utility to take stored procs and tables and save to sql files
  * Ability to load sql alter and patch scripts for deployment.
@@ -9,13 +9,13 @@
  */
 
 /**
- * Class OpsSmithdbTableManager
+ * Class SqlBakeDbTableManager
  */
-class OpsSmithdbTableManager extends legacyDb{
+class SqlBakeDbTableManager extends legacyDb{
     /**
-     * using trait SqlBakeDBConfig;
+     * using trait SqlBakeDbConfig;
      */
-    use SqlBakeDBConfig;
+    use SqlBakeDbConfig;
 
     /**
      * @var array
@@ -229,13 +229,13 @@ class OpsSmithdbTableManager extends legacyDb{
 }
 
 /**
- * Class OpsSmithdbProcManager
+ * Class SqlBakeDbProcManager
  */
-class OpsSmithdbProcManager extends legacyDb{
+class SqlBakeDbProcManager extends legacyDb{
     /**
-     * using trait SqlBakeDBConfig;
+     * using trait SqlBakeDbConfig;
      */
-    use SqlBakeDBConfig;
+    use SqlBakeDbConfig;
 
     /**
      * @var array
