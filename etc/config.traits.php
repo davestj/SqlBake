@@ -1,6 +1,6 @@
 <?php
 /**
- * SqlBake – Database management tool
+ * SqlBake
  *
  * Utility to take stored procs and tables and save to SQL files
  * Ability to load SQL alter and patch scripts for deployment.
@@ -8,11 +8,11 @@
  */
 
 /**
- * Trait SqlBakeDBConfig
+ * Trait SqlBakeDbConfig
  *
  * Config objects for db abstraction layer and system configurations
  */
-trait SqlBakeDBConfig{
+trait SqlBakeDbConfig{
 
     public function db_manager_host(){
         return "prod-db-manager";

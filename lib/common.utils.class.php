@@ -1,6 +1,6 @@
 <?php
 /**
- * SqlBake – Database management tool
+ * SqlBake
  *
  * Utility to take stored procs and tables and save to sql files
  * Ability to load sql alter and patch scripts for deployment.
@@ -14,7 +14,7 @@
 */
 class SqlBakeUtils extends SqlBakeDb
 {
-    use SqlBakeDBConfig;
+    use SqlBakeDbConfig;
     use SqlBakeConfig;
 
     public $base_path = "./databases";
@@ -389,7 +389,7 @@ class SqlBakeUtils extends SqlBakeDb
             switch ($value) {
                 case 'list':
                     echo "dumping proc list\n";
-                    $p       = new OpsSmithdbProcManager();
+                    $p       = new SqlBakeDbProcManager();
                     $proclist = $p->get_proc_list();
                     foreach ($proclist as $theproc) {
                         $procsql = $p->get_proc_by_name($theproc);
@@ -400,7 +400,7 @@ class SqlBakeUtils extends SqlBakeDb
 
                 case  'save':
                     echo "saving all procs to disk\n";
-                    $p       = new OpsSmithdbProcManager();
+                    $p       = new SqlBakeDbProcManager();
                     $proclist = $p->get_proc_list();
                     foreach ($proclist as $theproc) {
                         $procsql = $p->get_proc_by_name($theproc);
@@ -411,12 +411,12 @@ class SqlBakeUtils extends SqlBakeDb
 
                 case  'clean':
                     echo "cleaning all procs on disk\n";
-                    $p       = new OpsSmithdbProcManager();
+                    $p       = new SqlBakeDbProcManager();
                     $cleanit = $p->clean_procs();
                     break;
 
                 case  'load':
-                    $p            = new OpsSmithdbProcManager();
+                    $p            = new SqlBakeDbProcManager();
                     $proclistfs  = $p->get_proc_list_from_fs();
                     echo "loading all procs.sql files on disk to mysql server\n";
                     foreach ($proclistfs as $theproc) {
@@ -439,7 +439,7 @@ class SqlBakeUtils extends SqlBakeDb
             switch ($value) {
                 case 'show':
                     echo "dumping table list name and raw sql\n";
-                    $t          = new OpsSmithdbTableManager();
+                    $t          = new SqlBakeDbTableManager();
                     $tablelist = $t->get_tables_list();
                     foreach ($tablelist as $thetable) {
                         $tablesql = $t->get_table_by_name($thetable, false);
@@ -450,7 +450,7 @@ class SqlBakeUtils extends SqlBakeDb
 
                 case 'list':
                     echo "showing table list from filesystem\n";
-                    $t         = new OpsSmithdbTableManager();
+                    $t         = new SqlBakeDbTableManager();
                     $tablelist = $t->get_table_list_from_fs();
                     foreach ($tablelist as $thetable) {
                         echo "\e[1;32m\ntable name: $thetable \e[0m\n";
@@ -458,7 +458,7 @@ class SqlBakeUtils extends SqlBakeDb
                     break;
 
                 case  'save':
-                    $t          = new OpsSmithdbTableManager();
+                    $t          = new SqlBakeDbTableManager();
                     $tablelist = $t->get_tables_list();
                     echo "saving all tables to disk\n";
                     foreach ($tablelist as $thetable) {
@@ -470,12 +470,12 @@ class SqlBakeUtils extends SqlBakeDb
 
                 case  'clean':
                     echo "cleaning all tables on disk\n";
-                    $t       = new OpsSmithdbTableManager();
+                    $t       = new SqlBakeDbTableManager();
                     $cleanit = $t->clean_tables();
                     break;
 
                 case  'load':
-                    $t            = new OpsSmithdbTableManager();
+                    $t            = new SqlBakeDbTableManager();
                     $tablelistfs = $t->get_table_list_from_fs();
                     echo "loading all table.sql files on disk to mysql server\n";
                     foreach ($tablelistfs as $thetable) {

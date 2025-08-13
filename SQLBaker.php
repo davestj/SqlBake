@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 /**
- * SqlBake – Database management tool
+ * SqlBake
  *
  * Utility to take stored procs and tables and save to SQL files
  * Ability to load SQL alter and patch scripts for deployment.
