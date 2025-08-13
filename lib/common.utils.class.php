@@ -9,10 +9,10 @@
  */
 
 /**
- * Class OpsSmithUtils
+ * Class SqlBakeUtils
  * @uses SqlBakeDb
 */
-class OpsSmithUtils extends SqlBakeDb
+class SqlBakeUtils extends SqlBakeDb
 {
     use SqlBakeDBConfig;
     use SqlBakeConfig;
